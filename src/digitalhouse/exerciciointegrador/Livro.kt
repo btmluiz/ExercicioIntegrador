@@ -3,7 +3,7 @@ package digitalhouse.exerciciointegrador
 class Livro(
         var titulo: String,
         var autor: String,
-        var anoLancamento: String,
+        var anoLancamento: Int,
         override var quantidadeEstoque: Int,
         override var preco: Double
 ) : Produto {
