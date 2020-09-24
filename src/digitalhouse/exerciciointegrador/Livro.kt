@@ -1,13 +1,14 @@
 package digitalhouse.exerciciointegrador
 
-import kotlin.properties.Delegates
-
-data class Livro(
-        override var quantidadeEstoque: Int,
-        override var preco: Double,
+class Livro(
         var titulo: String,
         var autor: String,
-        var anoLancamento: String
+        var anoLancamento: String,
+        override var quantidadeEstoque: Int,
+        override var preco: Double
 ) : Produto {
-    override var codigo by Delegates.notNull<Int>()
+    override var codigo = 0
+    override fun toString(): String {
+        return "Livro(titulo='$titulo', autor='$autor', anoLancamento='$anoLancamento', quatidade='$quantidadeEstoque')"
+    }
 }
